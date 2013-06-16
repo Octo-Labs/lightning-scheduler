@@ -4,8 +4,10 @@ App.Router.map(function() {
   this.resource('about');
   this.resource('lightning_sessions',function(){
     this.resource('lightning_session',
-      { path: ':lightning_session_id' }
-    );
+      { path: ':lightning_session_id' },
+      function(){
+        this.route('edit')
+      });
     this.route('new');
   });
 });

@@ -30,6 +30,15 @@ App.LightningSessionsNewController = Ember.ObjectController.extend({
   }
 });
 
+App.LightningSessionEditRoute = Ember.Route.extend({
+  model: function(){
+    return this.modelFor('lightning_session');;
+  },
+  renderTemplate: function() {
+    this.render('lightning_session/edit',{into:'lightning_sessions'});
+  }
+});
+
 
 
 
