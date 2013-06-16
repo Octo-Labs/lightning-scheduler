@@ -3,6 +3,22 @@ App.LightningSession = DS.Model.extend({
   scheduled_at: DS.attr('date')
 })
 
+App.LightningSessionsRoute = Ember.Route.extend({
+  model: function() {
+    return App.LightningSession.find();
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
 App.LightningSession.FIXTURES = [
   {
     id: 1,
