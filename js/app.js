@@ -6,6 +6,7 @@ App.Router.map(function() {
     this.resource('lightning_session',
       { path: ':lightning_session_id' }
     );
+    this.route('new');
   });
 });
 
