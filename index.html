@@ -84,6 +84,29 @@
     <h4>{{date scheduled_at}}</h4>
   </script>
 
+  <script type="text/x-handlebars" data-template-name="lightning_sessions/new">
+    <h2>Add a new Lighting Session</h2>
+    <div class="form-horizontal">
+      <div class="control-group">
+        <label class="control-label" for="lightning-session-name">Name</label>
+        <div class="controls">
+          {{view Em.TextField elementId='lightning-session-name' valueBinding='content.name' placeholder='Name'}}
+        </div>
+      </div>
+      <div class="control-group">
+        <label class="control-label" for="lightning-session-scheduled-at">Scheduled At</label>
+        <div class="controls">
+          {{view Em.TextField elementId='lightning-session-scheduled-at' valueBinding='content.scheduled_at' placeholder='yyyy/mm/dd'}}
+        </div>
+      </div>
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn">Cancel</button>
+      </div>
+    </div>
+
+  </script>
+
   <script src="js/libs/jquery-1.9.1.js"></script>
   <script src="js/libs/handlebars-1.0.0-rc.4.js"></script>
   <script src="js/libs/ember-1.0.0-rc.5.js"></script>
