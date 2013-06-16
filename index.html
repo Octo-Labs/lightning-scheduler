@@ -83,10 +83,15 @@
     <h2>{{name}}</h2>
     <h4>{{date scheduled_at}}</h4>
     {{#linkTo 'lightning_session.edit' this class='btn btn-primary'}}Edit{{/linkTo}}
+    {{outlet}}
   </script>
 
   <script type="text/x-handlebars" data-template-name="lightning_sessions/new">
     <h2>Add a new Lighting Session</h2>
+    {{partial 'lightning_session/form'}}
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="lightning_session/_form">
     <div class="form-horizontal">
       <div class="control-group">
         <label class="control-label" for="lightning-session-name">Name</label>
@@ -105,11 +110,11 @@
         <button {{action cancel this}} class="btn">Cancel</button>
       </div>
     </div>
-
   </script>
 
   <script type="text/x-handlebars" data-template-name="lightning_session/edit">
     <h2>Editing session : {{name}}</h2>
+    {{partial 'lightning_session/form'}}
   </script>
 
   <script src="js/libs/jquery-1.9.1.js"></script>

@@ -35,11 +35,22 @@ App.LightningSessionEditRoute = Ember.Route.extend({
     return this.modelFor('lightning_session');;
   },
   renderTemplate: function() {
-    this.render('lightning_session/edit',{into:'lightning_sessions'});
+    this.render('lightning_session/edit');
   }
 });
 
-
+App.LightningSessionEditController = Ember.ObjectController.extend({
+  cancel: function(lightning_session){
+    this.get('model.transaction').rollback();
+    this.transitionToRoute('lightning_session',this.get('model'));
+  },
+  save: function(lightning_session){
+    lightning_session.on('didUpdate',this,function(){
+      this.transitionToRoute('lightning_session',this.get('model'));
+    })
+    lightning_session.get('transaction').commit();
+  }
+});
 
 
 
