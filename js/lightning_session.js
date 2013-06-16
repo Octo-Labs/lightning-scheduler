@@ -10,7 +10,11 @@ App.LightningSessionsRoute = Ember.Route.extend({
 });
 
 
-
+App.LightningSessionsNewRoute = Ember.Route.extend({
+  model: function(){
+    return App.LightningSession.createRecord({});
+  }
+});
 
 
 
