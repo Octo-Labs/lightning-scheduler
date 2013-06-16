@@ -2,3 +2,27 @@
 body{
   padding-top:50px;
 }
+
+#lightning-sessions{
+  list-style:none;
+  margin:0px;
+  padding:0px;
+  border:1px solid #ccc;
+}
+
+#lightning-sessions li{
+  padding:3px;
+  border-bottom:1px solid #ccc;
+}
+
+#lightning-sessions li span{
+  display:block;
+}
+
+#lightning-sessions li .name{
+  font-size:1.2em;
+}
+
+#lightning-sessions li .date{
+  color:#999;
+}

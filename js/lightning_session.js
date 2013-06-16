@@ -24,5 +24,10 @@ App.LightningSession.FIXTURES = [
     id: 1,
     name: 'oks.js test session',
     scheduled_at: new Date()
+  },
+  {
+    id: 2,
+    name: 'some other session',
+    scheduled_at: new Date('2013/08/26')
   }
 ]

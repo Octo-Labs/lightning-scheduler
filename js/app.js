@@ -14,3 +14,12 @@ App.IndexRoute = Ember.Route.extend({
 App.Store = DS.Store.extend({
   adapter: 'DS.FixtureAdapter'
 });
+
+Ember.Handlebars.registerBoundHelper('from_now', function(date) {
+  return moment(date).fromNow();
+});
+
+
+Ember.Handlebars.registerBoundHelper('date', function(date) {
+  return moment(date).format('dddd, MMM Do YYYY');
+});
