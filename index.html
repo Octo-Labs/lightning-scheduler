@@ -28,8 +28,9 @@
         </div>
       </div>
     </div>
-
-    {{outlet}}
+    <div class="container-fluid">
+      {{outlet}}
+    </div>
   </script>
 
   <script type="text/x-handlebars" data-template-name="index">
@@ -39,6 +40,16 @@
     {{/each}}
     </ul>
   </script>
+
+  <script type="text/x-handlebars" data-template-name="about">
+    <h1>About Lightning Sessions</h1>
+    <p>
+      This is a small project created mainly as a way to demonostrate Ember.js.  The goal
+      is to create a simple app that could be used to keep track of speakers for a session
+      of lightning talks.
+    </p>
+  </script>
+
 
   <script src="js/libs/jquery-1.9.1.js"></script>
   <script src="js/libs/handlebars-1.0.0-rc.4.js"></script>
