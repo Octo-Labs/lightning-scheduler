@@ -9,3 +9,7 @@ App.IndexRoute = Ember.Route.extend({
     return ['green!','red', 'yellow', 'blue'];
   }
 });
+
+App.Store = DS.Store.extend({
+  adapter: 'DS.FixtureAdapter'
+});
