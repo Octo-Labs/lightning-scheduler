@@ -20,9 +20,15 @@ body{
 }
 
 #lightning-sessions li .name{
-  font-size:1.2em;
+  font-size:1.6em;
 }
 
 #lightning-sessions li .date{
   color:#999;
+}
+
+footer{
+  background:#efefef;
+  padding:10px 24px;
+  margin:10px 0 0;
 }
