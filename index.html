@@ -62,8 +62,10 @@
         <ul id="lightning-sessions">
           {{#each model}}
             <li>
+              {{#linkTo 'lightning_session' this }}
               <span class="name">{{name}}</span>
               <span class="date">{{date scheduled_at}}</span>
+              {{/linkTo}}
             </li>
           {{/each}}
         </ul>
