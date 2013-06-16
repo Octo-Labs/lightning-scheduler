@@ -23,6 +23,7 @@
             <ul class="nav">
               <li class="active"><a href="#">Home</a></li>
               <li><a href="#about">About</a></li>
+              <li>{{#linkTo 'lightning_sessions'}}Lightning Sessions{{/linkTo}}</li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -50,6 +51,15 @@
     </p>
   </script>
 
+
+  <script type="text/x-handlebars" data-template-name="lightning_sessions">
+    <h2>Lightning Sessions</h2>
+    <ul>
+      {{#each model}}
+        <li>{{name}} : {{scheduled_at}}</li>
+      {{/each}}
+    </ul>
+  </script>
 
   <script src="js/libs/jquery-1.9.1.js"></script>
   <script src="js/libs/handlebars-1.0.0-rc.4.js"></script>
