@@ -2,7 +2,11 @@ App = Ember.Application.create();
 
 App.Router.map(function() {
   this.resource('about');
-  this.resource('lightning_sessions');
+  this.resource('lightning_sessions',function(){
+    this.resource('lightning_session',
+      { path: ':lightning_session_id' }
+    );
+  });
 });
 
 App.IndexRoute = Ember.Route.extend({
