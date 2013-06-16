@@ -17,6 +17,20 @@ App.LightningSessionsNewRoute = Ember.Route.extend({
 });
 
 
+App.LightningSessionsNewController = Ember.ObjectController.extend({
+  cancel: function(lightning_session){
+    this.get('model.transaction').rollback();
+    this.transitionToRoute('lightning_sessions');
+  },
+  save: function(lightning_session){
+    lightning_session.on('didCreate',this,function(){
+      this.transitionToRoute('lightning_session',this.get('model'));
+    })
+    lightning_session.get('transaction').commit();
+  }
+});
+
+
 
 
 
